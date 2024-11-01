@@ -1,0 +1,46 @@
+@import '../vars';
+
+.safi-toolbar-container {
+    display: flex;
+
+    @media (max-width: 1200px) {
+        position: absolute;
+        left: 240px;
+        height: 40px;
+    }
+}
+
+.safi-toolbar {
+
+    position: relative;
+    height: 100%;
+    display: flex;
+    margin: 0 10px;
+
+    .safi-tool {
+        height: 100%;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        &:hover {
+            background-color: #dda0dd40;
+        }
+
+        &.--active {
+            background-color: $col-accent;
+        }
+
+        &[disabled] {
+            pointer-events: none;
+            // background-color: red;
+
+            & svg path {
+                fill: #444444 !important;
+            }
+        }
+
+    }
+}

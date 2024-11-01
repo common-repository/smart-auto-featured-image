@@ -1,0 +1,179 @@
+@import '../vars';
+
+$header-height: 38px;
+$dyn-fields-col-width: 280px;
+
+#safi-preview-wrap {
+    // display: none;
+    display: flex;
+    // flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    bottom: 5px;
+    right: 5px;
+    // top: 32px;
+    // left: 160px;
+    // bottom: 0;
+    // right: 0;
+    z-index: 99999;
+    background: #000000;
+    // padding: 20px;
+    // height: 100%;
+    // height: 640px;
+    // width: 100%;
+}
+
+#safi-preview-header,
+#safi-preview-footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    // height: 40px;
+    // width: 100%;
+    text-align: right;
+}
+
+#safi-preview-header {
+    z-index: 1;
+    top: 0;
+    padding: 6px 6px;
+    background: var(--safi-header-bg-color);
+    height: $header-height;
+}
+
+
+#safi-preview-body {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding-top: $header-height;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#safi-preview-main {
+    // flex: 1;
+    // align-items: center;
+    // justify-content: center;
+    /* flex: 1; */
+    align-items: center;
+    justify-content: center;
+    /* width: 100%; */
+    position: absolute;
+    top: $header-height;
+    left: $dyn-fields-col-width;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#safi-preview-dynamic-fields {
+    z-index: 1;
+    background-color: $col-dark-sidebar;
+    // padding: 20px;
+    min-width: $dyn-fields-col-width;
+    width: $dyn-fields-col-width;
+    position: absolute;
+    bottom: 0;
+    top: $header-height;
+
+    &+#safi-preview-main {
+        left: $dyn-fields-col-width;
+
+        #safi-preview-footer {
+            // left: $dyn-fields-col-width;
+        }
+    }
+}
+
+.safi-preview-dynamic-fields--body {
+    overflow-y: auto;
+    height: 100%;
+}
+
+#safi-preview-footer {
+    bottom: 0;
+    // width: 100%;
+    // padding: 6px 6px;
+    text-align: center;
+    left: 0;
+}
+
+#safi-credits-usage {
+    position: absolute;
+    top: 9px;
+    left: 14px;
+    color: #808080;
+}
+
+.safi-preview-dynamic-field {
+    // position: relative; 
+    border-bottom: 1px solid gray;
+    // padding: 5px;
+    padding: 10px;
+    // margin-bottom: 10px;
+
+    .safi-image-browser-wrap {
+
+        top: $header-height;
+        top: 0;
+        right: initial;
+        left: $dyn-fields-col-width + 1px;
+        width: 600px;
+        z-index: 1;
+    }
+
+    >label {
+        margin-bottom: 6px;
+        color: white;
+        /* text-transform: uppercase; */
+        display: block;
+        font-weight: 600;
+        font-size: 12px;
+    }
+}
+
+/** Change this value if more tools are added to the toolebar
+This is a workaround against the bug that makes the tolbar 100% width) **/
+.mce-floatpanel.mce-tinymce-inline,
+.mce-toolbar-grp,
+.mce-container-body {
+    width: 186px !important;
+}
+.mce-floatpanel.mce-popover.mce-bottom {
+    //color float panel
+    z-index: 1000000 !important;
+}
+.mce-floatpanel.mce-tinymce-inline {
+    z-index: 1000000 !important;
+}
+
+.mce-content-body {
+    min-height: 48px;
+    color: white;
+    border: 1px solid #5e5e5e;
+    border-radius: 2px;
+    padding: 4px 6px;
+    background-color: $col-dark;
+}
+.safi-dynamic-fields {
+    position: relative;
+
+    .safi-fa-icon-picker--container {
+        max-height: 72px;
+    }
+
+    .safi-icon-control input {
+        &:focus {
+            &+.safi-fa-icon-picker--container {
+                max-height: 250px;
+            }
+        }
+    }
+}

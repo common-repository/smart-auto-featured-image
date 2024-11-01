@@ -1,0 +1,285 @@
+@import '../vars';
+
+.safi-layer-label-edit {
+    input {
+        padding: 0 4px;
+        line-height: 1;
+        min-height: 24px;
+        color: $col-light;
+        border: 1px solid $plain-border-col;
+        border-radius: 2px;
+        background-color: $col-dark;
+    }
+}
+
+$layer-height: 30px;
+
+.no-layers {
+    height: 33px;
+    user-select: none;
+    color: #808080;
+    font-style: italic;
+}
+
+#safi-layers {
+    margin-right: -$panel-padding;
+    margin-left: -$panel-padding;
+
+    >.safi-layer {
+        &:last-of-type {
+            border-bottom: 1px solid #80808080;
+        }
+    }
+
+    .safi-layer {
+        // display: flex;
+        background-color: $col-dark;
+        border-top: 1px solid #80808080;
+        border-left: 1px solid #80808080;
+
+
+        &.--layer-condition {
+            >.safi-layer-container {
+                background-color: #000000;
+            }
+        }
+
+        &.--layer-conditional {
+            background-color: #221ccf;
+            border-bottom: 4px solid #221ccf;
+
+            >.safi-layer-container {
+                background-color: #221ccf;
+            }
+        }
+
+        // >div {
+        // }
+
+        &.--selected {
+            // border: 1px solid $col-accent-alt3;
+
+            >.safi-layer-container {
+                // background-color: rgba($col-accent-alt3, .75);
+                background-color: $col-accent-alt3-dark;
+                border: 1px solid $col-accent-alt3-dark;
+            }
+        }
+
+        $col-dyn-1:#4e4d4e;
+        $col-dyn-2:#525252;
+
+
+        &.--selected.--dynamic {
+            // border: 1px solid $col-accent-alt3;
+
+            >.safi-layer-container {
+                // background-color: rgba($col-accent-alt3, .75);
+                // background-color: $col-accent;
+                // background-color: #ac6886;
+                background-image: linear-gradient(135deg, $col-dyn-1 25%, $col-dyn-2 25%, $col-dyn-2 50%, $col-dyn-1 50%, $col-dyn-1 75%, $col-dyn-2 75%, $col-dyn-2 100%);
+                background-repeat: repeat;
+                background-size: cover;
+                background-size: 8px 8px;
+                background-blend-mode: hard-light;
+                border: 1px solid $col-accent-alt3-dark;
+            }
+        }
+        &.--dynamic:not(.--selected) {
+
+            >.safi-layer-container {
+                // background-color: rgba($col-accent-alt3, .75);
+                // background-color: red;
+                // border: 1px solid green;
+                background-color: $col-accent;
+                // border: 1px solid $col-accent;
+                background-image: linear-gradient(135deg, $col-dyn-1 25%, $col-dyn-2 25%, $col-dyn-2 50%, $col-dyn-1 50%, $col-dyn-1 75%, $col-dyn-2 75%, $col-dyn-2 100%);
+                background-repeat: repeat;
+                background-size: cover;
+                background-size: 8px 8px;
+                // background-color: #007fe1;
+                // border: 1px solid #5395ff;
+            }
+        }
+
+        &.--collapsed {
+            >.safi-layer-children {
+                display: none !important;
+            }
+        }
+
+        &.--layer-columns {
+
+            // border: 1px solid $col-dark;
+            >.safi-layer-container {
+                // background-color: $col-dark;
+            }
+        }
+
+        &.--layer-container {
+
+            >.safi-layer-container {
+                // background-color: #6d6a6d;
+                // background-color: #272027;
+            }
+        }
+
+        .safi-dynamic,
+        .safi-lock,
+        .safi-eye {
+            display: none;
+        }
+
+        &.--locked {
+            .safi-lock {
+                display: block;
+            }
+        }
+
+        &.--invisible {
+            .safi-eye {
+                display: block;
+            }
+        }
+
+        &.--dynamic {
+            .safi-dynamic {
+                display: block;
+            }
+        }
+
+
+        .safi-layer-container {
+            position: relative;
+            background-color: $col-dark-sidebar;
+            height: $layer-height;
+            display: flex;
+            align-items: center;
+            border: 1px solid $col-dark-sidebar;
+
+            // >div:not(.safi-layer-actions) {
+            >div {
+                display: flex;
+                align-items: center;
+            }
+
+            @at-root .safi-layer-icon {
+                height: 100%;
+                width: $layer-height;
+                justify-content: center;
+            }
+
+            @at-root .safi-layer-action-icon {
+                height: 100%;
+                width: 18px;
+                justify-content: center;
+            }
+
+            @at-root .safi-layer-label {
+                font-size: 12px;
+                flex: 1;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+
+
+            &:hover {
+                // background-color: $col-accent;
+                border: 1px solid $col-accent-alt3;
+
+                // .safi-layer-actions {
+                //     display: flex;
+                // }
+            }
+
+            &:not(.--is-editing):hover {
+
+                .safi-dynamic,
+                .safi-lock,
+                .safi-eye {
+                    display: block;
+                }
+            }
+
+            @at-root .safi-layer-controls {
+                cursor: pointer;
+
+                .safi-layer-icon {
+                    width: 22px;
+                }
+            }
+
+            // @at-root .safi-layer-control {
+            //     width: 20px;
+            // }
+
+
+            // @at-root .safi-layer-actions {
+            //     display: none;
+            //     position: absolute;
+            //     background-color: $col-accent-alt3;
+            //     right: -1px;
+            //     top: -22px;
+            //     height: 22px;
+            //     padding: 0px 4px;
+            //     border-radius: 4px 4px 0 0;
+            // }
+        }
+
+        @at-root .safi-layer-children {
+            padding-left: calc($layer-height / 4);
+            // width: $layer-height;
+            // justify-content: center;
+        }
+
+        &.--is-editing {
+            .safi-layer-container:hover {
+
+                .safi-dynamic,
+                .safi-lock,
+                .safi-eye {
+                    display: none;
+                }
+            }
+        }
+
+    }
+}
+
+.safi-layer-tip {
+    font-style: italic;
+    height: calc($layer-height / 2);
+    line-height: calc($layer-height / 2);
+    text-align: center;
+    color: gray;
+    font-size: 10px;
+}
+
+.safi-layer-actions {
+    display: flex;
+    justify-content: flex-end;
+    // background-color: #27262780;
+    // border-top: 1px solid $col-dark;
+    margin-left: -8px;
+    margin-right: -8px;
+    padding: 8px;
+}
+
+.safi-layer-action {
+    cursor: pointer;
+    padding: 0 2px;
+
+    &[disabled] {
+        pointer-events: none;
+
+        .safi-icon-container svg path {
+            fill: #666666;
+        }
+    }
+}
+
+// .sortable-chosen {
+//     .safi-layer-tip {
+//         display: none;
+//     }
+// }

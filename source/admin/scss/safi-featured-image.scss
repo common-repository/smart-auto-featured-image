@@ -1,0 +1,173 @@
+$col-accent: #8c53ff;
+$col-accent-alt2: #0014ff;
+$col-accent-admin: var(--wp-components-color-accent, var(--wp-admin-theme-color, #{$col-accent-alt2}));
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.components-panel__row.align-right {
+    justify-content: flex-end;
+
+}
+
+.safi-fi-panel {
+    background-color: rgb(247 247 247);
+    // background-color: #dde1ff;
+    // background-color: rgba($col-accent-admin, 0.2);
+    // background-color: color-mix(in srgb, $col-accent-admin 15%, transparent);
+    padding: 10px 8px;
+    border-radius: 2px;
+    // margin: 16px -8px 0;
+    margin: 0 0 16px;
+    border-top: 3px solid #00000014;
+    // border-top: 3px solid color-mix(in srgb, $col-accent-admin 15%, transparent);
+    border-top: 3px solid  $col-accent-admin;
+    // box-shadow: 0 0 4px #8e8e8e1f inset;
+
+    .safi-select-tip {
+        font-size: 11px;
+        font-style: italic;
+        color: gray;
+        color: #80808080;
+        margin: -8px 0 0 0 !important;
+    }
+
+    .safi-template {
+        position: relative;
+        box-shadow: none;
+        border-radius: 8px 8px 0 0;
+
+        &:after {
+            border-radius: inherit;
+            visibility: hidden;
+            content: 'Click to edit';
+            pointer-events: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            background-color: #00000080;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        &:hover {
+            &:after {
+                visibility: visible;
+                opacity: 1;
+                // animation: all 0.2s;
+                transition: opacity 0.3s, visibility 0.3s;
+            }
+        }
+    }
+}
+
+.safi-fi-panel-title {
+    text-align: center;
+    text-transform: uppercase;
+    // font-size: 10px;
+    // font-weight: 600;
+    // color: $col-accent-admin;
+    font-size: 9px;
+    font-weight: 700;
+    color: rgb(0 0 0 / 75%);
+}
+
+.safi-active-template {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 0 0 6px 0;
+    margin: 18px 0 12px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    // border: 1px solid $col-accent-admin;
+
+
+    span {
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    &::before {
+        z-index: 1;
+        content: "Selected template";
+        position: absolute;
+        // top: -10px;
+        top: 0;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 200;
+        color: white;
+        background-color: $col-accent-admin;
+        padding: 0 8px;
+        // border-radius: 10px;
+        border-radius: 0 0 10px 10px;
+        // border: 1px solid $col-accent-alt2;
+    }
+}
+
+.safi-custom-template-controls {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.safi-panel-button {
+    // margin-left: 6px;
+}
+
+.safi-modal {
+    min-height: calc(100vh - 30px) !important;
+    width: calc(100vw - 30px) !important;
+
+    .components-modal__content {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+    }
+}
+
+.safi-modal--content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.safi-modal--footer {
+    text-align: right;
+}
+
+#safi-preview-content {
+    margin: 0 auto;
+    box-shadow: 0 0 30px #00000014;
+    margin-bottom: 15vh;
+
+    &.--hidden {
+        visibility: hidden !important;
+    }
+}
+
+// #iframe-preview{
+//     box-shadow: 0 0 60px #ffffff60;
+// }

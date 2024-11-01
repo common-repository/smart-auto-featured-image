@@ -1,0 +1,39 @@
+@import '../vars';
+
+.safi-intent-modal {
+    // border-radius: 4px;
+    background-color: white;
+    padding: 32px;
+    color: black;
+    min-width: 320px;
+    max-width: 40%;
+
+    transform: scale(0.1);
+    transition: transform 0.25s;
+
+    &.--open {
+        transform: scale(1);
+    }
+
+    button {
+        margin-left: 6px !important;
+        min-width: 80px !important;
+    }
+}
+
+.safi-intent-modal-header {
+    font-size: 1.25em;
+    margin-bottom: 1em;
+}
+
+.safi-intent-modal-body {
+    p {
+        font-size: 18px;
+    }
+
+}
+
+.safi-intent-modal-footer {
+    margin-top: 1em;
+    text-align: right;
+}

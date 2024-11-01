@@ -1,0 +1,41 @@
+.rtl {
+    #joli-title .h1-subtitle {
+        margin-right: initial;
+        margin-left: 16px;
+    }
+
+    .safi-wrap {
+
+        .joli-content {
+            margin-left: initial;
+            margin-right: 180px;
+        }
+
+        aside.joli-sidebar .joli-sidebar-item {
+            margin: 0 1em 1em 0;
+        }
+
+        .joli-nav .joli-nav-item:hover,
+        .joli-nav .joli-nav-item.nav-tab-active {
+            border-right: 5px solid #5838e9;
+            border-left: none;
+            border-radius: 0 5px 5px 0;
+            box-shadow: 8px 0 8px #d8d8d8;
+        }
+
+        .joli-submit {
+            right: initial;
+            left: 290px;
+        }
+
+        .joli-css-unit-field label input {
+            padding-right: 10px;
+            padding-left: 0;
+        }
+
+        .joli-css-unit-field label select {
+            padding-left: 24px;
+        }
+    }
+
+}

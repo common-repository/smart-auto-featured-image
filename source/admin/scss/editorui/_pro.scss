@@ -1,0 +1,55 @@
+@import './vars';
+
+.safi-tool {
+    &.--pro:before {
+        content: 'PRO';
+        position: absolute;
+        color: $col-accent;
+        font-size: 10px;
+        font-weight: 600;
+        top: 20px;
+        left: 10px;
+        z-index: 1;
+    }
+}
+
+
+.safi-panel {
+    &.--pro {
+        .safi-panel-header {
+            .safi-panel-name {
+                text-shadow: none !important;
+            }
+
+            :after {
+                content: 'PRO';
+                position: absolute;
+                color: $col-accent;
+                font-size: 10px;
+                font-weight: 600;
+                top: 0px;
+                // right: 10px;
+                right: 28px;
+                z-index: 1;
+            }
+        }
+
+    }
+}
+
+button {
+    &.--pro {
+        position: relative;
+
+        &:after {
+            content: 'PRO';
+            position: absolute;
+            color: $col-accent;
+            font-size: 10px;
+            font-weight: 600;
+            top: -6px;
+            right: 1px;
+            z-index: 1;
+        }
+    }
+}

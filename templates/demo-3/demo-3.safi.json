@@ -1,0 +1,85 @@
+{
+    "id": "fc05885c",
+    "name": "Dynamic text",
+    "content": {
+        "canvas": {
+            "templateName": "Dynamic text",
+            "width": 1200,
+            "height": 620,
+            "googleFonts": [],
+            "backgroundColor": "#d1d1b4",
+            "zoom": 1,
+            "gridSize": 20,
+            "globalCss": null
+        },
+        "tree": [ {
+            "id": "text-1"
+        }, {
+            "id": "image-1"
+        } ],
+        "elements": [ {
+            "type": "text",
+            "id": "text-1",
+            "label": "This post has been written by {{author}} in {{date:Y}} and its category is {{category}}\n\n{{domain}}",
+            "x": 40,
+            "y": 40,
+            "opacity": 1,
+            "align": null,
+            "classes": null,
+            "customCss": null,
+            "locked": false,
+            "hAlign": null,
+            "vAlign": "center",
+            "text": "This post has been written by {{author}} in {{date:Y}} and its category is {{category}}\n\n{{domain}}",
+            "fontSize": 54,
+            "fontType": null,
+            "fontFamily": "Georgia",
+            "styles": {
+                "display": "flex",
+                "backgroundColor": "#ffffffd1",
+                "color": "#3a363c",
+                "fontWeight": "400",
+                "textAlign": "center",
+                "justifyContent": "center",
+                "alignItems": "center"
+            },
+            "width": 1120,
+            "height": 540,
+            "lineHeight": 1.4,
+            "padding": {
+                "right": 100,
+                "left": 100
+            }
+        }, {
+            "type": "image",
+            "id": "image-1",
+            "label": "Image 1",
+            "x": 0,
+            "y": 0,
+            "opacity": 1,
+            "align": null,
+            "classes": null,
+            "customCss": null,
+            "locked": false,
+            "hAlign": null,
+            "vAlign": null,
+            "sourceType": "template",
+            "fit": "cover",
+            "styles": [],
+            "imageStyles": {
+                "width": "100%",
+                "height": "100%",
+                "borderRadius": "inherit",
+                "userSelect": "none",
+                "pointerEvents": "none",
+                "objectPosition": "inherit"
+            },
+            "width": 1200,
+            "height": 620,
+            "srcTemplate": "fruit-and-vegetables.jpg",
+            "originalHeight": 667,
+            "originalWidth": 1000
+        } ]
+    },
+    "chosen": false
+}

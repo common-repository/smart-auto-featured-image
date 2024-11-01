@@ -1,0 +1,85 @@
+{
+    "id": "6516c1e8",
+    "name": "50/50",
+    "content": {
+        "canvas": {
+            "templateName": "50/50",
+            "width": 1200,
+            "height": 624,
+            "googleFonts": [],
+            "backgroundColor": "#4b8a62",
+            "zoom": 1,
+            "gridSize": 24
+        },
+        "tree": [
+            {
+                "id": "text-1"
+            },
+            {
+                "id": "image-1"
+            }
+        ],
+        "elements": [
+            {
+                "type": "text",
+                "id": "text-1",
+                "label": "Lorem ipsum dolor es ipalen kole marok si allum dosir",
+                "x": 48,
+                "y": 48,
+                "opacity": 1,
+                "align": null,
+                "classes": null,
+                "customCss": null,
+                "locked": false,
+                "hAlign": null,
+                "vAlign": "center",
+                "text": "Lorem ipsum dolor es ipalen kole marok si allum dosir",
+                "fontSize": "40",
+                "fontType": null,
+                "fontFamily": "Trebuchet MS",
+                "lineHeight": 1.3,
+                "styles": {
+                    "display": "flex",
+                    "backgroundColor": "",
+                    "color": "#ffffff",
+                    "fontWeight": "400",
+                    "textAlign": "left",
+                    "alignItems": "center",
+                    "justifyContent": "start"
+                },
+                "width": 504,
+                "height": 528
+            },
+            {
+                "type": "image",
+                "id": "image-1",
+                "label": "Main image",
+                "x": 600,
+                "y": 0,
+                "opacity": 1,
+                "align": null,
+                "classes": null,
+                "customCss": null,
+                "locked": false,
+                "hAlign": null,
+                "vAlign": null,
+                "sourceType": "template",
+                "fit": "cover",
+                "styles": [],
+                "imageStyles": {
+                    "width": "100%",
+                    "height": "100%",
+                    "borderRadius": "inherit",
+                    "userSelect": "none",
+                    "pointerEvents": "none",
+                    "objectPosition": "inherit"
+                },
+                "width": 600,
+                "height": 624,
+                "srcTemplate": "fruit-and-vegetables.jpg",
+                "originalHeight": 667,
+                "originalWidth": 1000
+            }
+        ]
+    }
+}
